@@ -222,7 +222,7 @@ productRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
-  expressAsyncHandler(async (req, res) => {
+  expressAsyncHndler(async (req, res) => {
     const product = await Product.findById(req.params.id);
     if (product) {
       await product.remove();
@@ -236,7 +236,7 @@ productRouter.delete(
 productRouter.post(
   '/:id/reviews',
   isAuth,
-  expressAsyncHandler(async (req, res) => {
+  expressAsyncHndler(async (req, res) => {
     const productId = req.params.id;
     const product = await Product.findById(productId);
     if (product) {
