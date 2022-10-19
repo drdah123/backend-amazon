@@ -1,0 +1,71 @@
+import bcrypt from 'bcryptjs';
+const data = {
+  products: [
+    {
+      //_id: '1',
+      name: 'Nike Slim shirt',
+      slug: 'nike-slim-shirt',
+      category: 'Shirts',
+      image: '/images/p1.jpg', // 679px × 829px
+      price: 120,
+      countInStock: 30,
+      brand: 'Nike',
+      rating: 2,
+      numReviews: 10,
+      description: 'high quality shirt',
+    },
+    {
+      //_id: '2',
+      name: 'Adidas Fit Shirt',
+      slug: 'adidas-fit-shirt',
+      category: 'Shirts',
+      image: '/images/p2.jpg',
+      price: 250,
+      countInStock: 50,
+      brand: 'Adidas',
+      rating: 4.0,
+      numReviews: 10,
+      description: 'high quality product',
+    },
+    {
+      //_id: '3',
+      name: 'Nike Slim Pant',
+      slug: 'nike-slim-pant',
+      category: 'Pants',
+      image: '/images/p3.jpg',
+      price: 25,
+      countInStock: 15,
+      brand: 'Nike',
+      rating: 4.5,
+      numReviews: 14,
+      description: 'high quality product',
+    },
+    {
+      //_id: '4',
+      name: 'Adidas Fit Pant',
+      slug: 'adidas-fit-pant',
+      category: 'Pants',
+      image: '/images/p4.jpg',
+      price: 65,
+      countInStock: 3,
+      brand: 'Puma',
+      rating: 4.5,
+      numReviews: 10,
+      description: 'high quality product',
+    },
+  ],
+  users: [
+    {
+      name: 'abdlarahman',
+      email: 'adbalrahmaan@hoot.com',
+      password: bcrypt.hashSync('0123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'abdlarahman2',
+      email: 'adbalrahman@hoots.com',
+      password: bcrypt.hashSync('0123'),
+    },
+  ],
+};
+export default data;
