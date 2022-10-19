@@ -99,7 +99,7 @@ orderRouter.get(
   })
 );
 
-oorderRouter.put(
+orderRouter.put(
   '/:id/pay',
   isAuth,
   expressAsyncHandler(async (req, res) => {
